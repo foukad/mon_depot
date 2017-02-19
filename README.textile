@@ -1,5 +1,17 @@
 h1. Important note!
 
+
+/*Début Joachim Thibout*/
+Ok, alors la base de donnée est à la racine du projet (catalogue.sql)
+n'oubliez pas de vérifier que le mod_rewrite soit activé pour faire marcher le site
+n'oubliez pas de changer les paramètres de connexion de base de donnée pour que ça fonctionne avec la nouvelle base
+n'oubliez pas ce projet, gardez-le et améliorez-le (pagination ?)
+n'oubliez pas de vérifier comment ont été fait les commentaires en page détail des film ainsi que le slider en page d'accueil : ce sont des modules jQuery que j'ai importé.
+n'oubliez pas non plus votre formateur préféré :)
+
+/*Fin Joachim Thibout*/
+
+
 Versions 0.3.0, 0.3.1 and 0.3.2 are broken.
 
 Please switch to version 0.3.3 if you experience any problems

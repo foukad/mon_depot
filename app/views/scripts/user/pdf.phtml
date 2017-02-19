@@ -1,0 +1,21 @@
+<?php
+$html='
+<table>
+    <tr>
+        <td>Film</td>
+        <td>Quantité</td>
+    </tr>';
+foreach ($this->panier as $key =>$panier){
+    $html.='<tr>
+            <td>'.$panier['film']->titre.' </td>
+            <td>'.$panier['quantite'].'</td>
+            </tr>';
+}
+$html.='</table>';
+
+$pdf=new PDF_HTML_Table();
+$pdf->AddPage();
+$pdf->SetFont('Arial','',10);
+$pdf->SetMargins(0, 0);
+$pdf->WriteHTML(utf8_decode("<h1>Facture envoyée</h1><br>$html<br>Merci de votre visite !"));
+$pdf->Output();

@@ -1,0 +1,19 @@
+<h1>Liste des catégories</h1>
+<?php if($this->delete>0){
+    ?>
+    <div class="alert alert-success"><strong>Félicitations !</strong> La catégorie a été supprimée avec succès</div>
+    <?php
+}elseif ($this->delete===false){
+    ?>
+    <div class="alert alert-danger"><strong>ERREUR !</strong> La catégorie n'a pas pu être supprimée</div>
+    <?php
+}
+
+echo '<ul class="list-group">';
+foreach ($this->categs as $categ){
+    echo '<li class="list-group-item"><a href="categorie-update?id='.$categ->id.'">'.$categ->nom.'</a>';
+    if($this->session->role==2)
+      echo '<a onclick="return confirm(\'êtes-vous sûr de vouloir supprimer cette catégorie ?\')" href="?iddelete='.$categ->id.'" class="pull-right"><span class="glyphicon glyphicon-trash"></span></a>';
+  echo '</li>';
+}
+ echo '</ul>';

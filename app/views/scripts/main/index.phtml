@@ -1,0 +1,62 @@
+<script src="javascripts/responsiveslides.min.js"></script>
+<link rel="stylesheet" href="<?php echo WEB_ROOT; ?>/stylesheets/jquery.gridder.min.css">
+
+<h1>VENEZ ACHETER DES FILMS SUR MA PLATFORME</h1>
+
+<!--<div class="slideshow">
+    <ul>
+        <?php /*foreach($this->films as $film){
+            echo '<li>
+            <img src="images/film/'.$film->image.'" alt="" width="350" height="200" />
+            </li>';
+        } */ ?>
+
+    </ul>
+</div>
+
+
+    <script>
+
+    $(function(){
+        setInterval(function(){
+            $(".slideshow ul").animate({marginLeft:-350},800,function(){
+                $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+            })
+        }, 3500);
+    });
+    </script>
+
+-->
+
+<ul class="rslides">
+    <?php foreach($this->films as $film){
+            echo '<li>
+            <img src="images/film/'.$film->image.'" alt="" width="350" height="200" />
+                </li>';
+
+        }  ?>
+</ul>
+
+
+
+<script>
+    $(".rslides").responsiveSlides({
+        auto: true,             // Boolean: Animate automatically, true or false
+        speed: 500,            // Integer: Speed of the transition, in milliseconds
+        timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+        pager: true,           // Boolean: Show pager, true or false
+        nav: false,             // Boolean: Show navigation, true or false
+        random: false,          // Boolean: Randomize the order of the slides, true or false
+        pause: false,           // Boolean: Pause on hover, true or false
+        pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+        prevText: "Previous",   // String: Text for the "previous" button
+        nextText: "Next",       // String: Text for the "next" button
+        maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+        navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+        manualControls: "",     // Selector: Declare custom pager navigation
+        namespace: "rslides",   // String: Change the default namespace used
+        before: function(){},   // Function: Before callback
+        after: function(){}     // Function: After callback
+    });
+
+</script>

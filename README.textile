@@ -1,6 +1,7 @@
 h1. Important note!
 
 
+
 /*Début Joachim Thibout*/
 Ok, alors la base de donnée est à la racine du projet (catalogue.sql)
 n'oubliez pas de vérifier que le mod_rewrite soit activé pour faire marcher le site
